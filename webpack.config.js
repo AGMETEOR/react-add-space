@@ -1,5 +1,7 @@
 const path = require('path');
+var webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template: path.join(__dirname, "examples/src/index.html"),
     filename: "./index.html"
@@ -9,6 +11,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractTextPlugin = new ExtractTextPlugin({
   filename: 'main.css'
 });
+
+const definePlugin = new webpack.DefinePlugin({
+    __DEV__: JSON.stringify(process.env.NODE_ENV !== 'production')
+})
+
 module.exports = {
     entry: path.join(__dirname, "examples/src/index.js"),
     output: {
@@ -35,7 +42,7 @@ module.exports = {
             }
         ]
     },
-    plugins: [htmlWebpackPlugin, extractTextPlugin],
+    plugins: [htmlWebpackPlugin, extractTextPlugin, definePlugin],
     resolve: {
         extensions: [".js", ".jsx"]
     },
