@@ -5,6 +5,9 @@
       "browser": true
     },
     "parser": "babel-eslint",
+    "globals": {
+      "__DEV__": true
+  },
     "rules": {
       "arrow-parens":0,
       "arrow-body-style":0,
