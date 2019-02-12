@@ -21,7 +21,9 @@ const myComponent = () => {
     return(
         <div>
             Hello I need space here
-            <Spacer amount={3} />
+            // instead of &nbsp; &nbsp;
+
+            <Spacer amount={2} />
             and some more space here
             <Spacer amount={8} />
         </div>
