@@ -1,6 +1,6 @@
 {
   "name": "react-add-space",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A simple library to add spaces between your text without multiple &nbsp; appearing in your code.",
   "main": "index.js",
   "repository": {
