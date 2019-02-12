@@ -9,7 +9,7 @@ const spacer = props => {
 
   if (__DEV__) {
     if (amount < 1) {
-      warning(false, 'Zero and Negative amounts not allowed. For Zero amount 1 will be used. For Negative amounts a positive version will be used');
+      warning(false, 'Zero and Negative amounts not allowed. For Zero amount 1 will be used. For Negative amounts a positive version will be used.');
     }
   }
 
