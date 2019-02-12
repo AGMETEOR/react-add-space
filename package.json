@@ -1,8 +1,12 @@
 {
   "name": "react-add-space",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A simple library to add spaces between your text without multiple &nbsp; appearing in your code.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AGMETEOR/react-add-space.git"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
@@ -12,7 +16,12 @@
     "publish-demo": "npm run build && npm run deploy",
     "test": "jest"
   },
+  "keywords": ["react","react-add-space","space","&nbsp;"],
   "author": "Allan Guwatudde",
+  "maintainers": [{
+    "name": "Allan Guwatudde",
+    "email": "allanguwatudde@gmail.com"
+  }],
   "license": "ISC",
   "peerDependencies": {
     "react": "^16.7.0",
@@ -20,9 +29,10 @@
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
@@ -42,6 +52,7 @@
     "jest": "^24.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "regenerator-runtime": "^0.13.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3",
