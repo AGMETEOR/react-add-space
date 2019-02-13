@@ -1,6 +1,6 @@
 {
   "name": "react-add-space",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "A simple library to add spaces between your text without multiple &nbsp; appearing in your code.",
   "main": "index.js",
   "repository": {
@@ -11,17 +11,24 @@
     "start": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
-    "build": "webpack --mode production",
+    "build": "webpack --config webpack.lib.config.js",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
     "test": "jest"
   },
-  "keywords": ["react","react-add-space","space","&nbsp;"],
+  "keywords": [
+    "react",
+    "react-add-space",
+    "space",
+    "&nbsp;"
+  ],
   "author": "Allan Guwatudde",
-  "maintainers": [{
-    "name": "Allan Guwatudde",
-    "email": "allanguwatudde@gmail.com"
-  }],
+  "maintainers": [
+    {
+      "name": "Allan Guwatudde",
+      "email": "allanguwatudde@gmail.com"
+    }
+  ],
   "license": "ISC",
   "peerDependencies": {
     "react": "^16.7.0",
